@@ -1,43 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Delavnica make.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="media/gear.svg">
 
-		<title>reveal.js</title>
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
 
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+  <style>
+    /* EMAIL THEME OVERRIDES */
+    .email {
+      background: #fff;
+      color: #222;
+      text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 40px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      max-width: 900px;
+      margin: auto;
+    }
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    .email-header {
+      font-size: 0.75em;
+      color: #555;
+      line-height: 1.3em;
+    }
 
-		<script src="dist/reveal.js"></script>
-		<script src="dist/plugin/notes.js"></script>
-		<script src="dist/plugin/markdown.js"></script>
-		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    .email-subject {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
-	</body>
+    .email-body {
+      margin-top: 20px;
+      font-size: 0.95em;
+      line-height: 1.5em;
+    }
+
+    .email-footer {
+      margin-top: 30px;
+      font-size: 0.75em;
+      color: #777;
+    }
+
+    .inbox-label {
+      display: inline-block;
+      background: #d93025;
+      color: white;
+      padding: 2px 7px;
+      border-radius: 12px;
+      font-size: 0.65em;
+      margin-bottom: 8px;
+    }
+
+    .thread {
+      margin-top: 15px;
+      padding-left: 12px;
+      border-left: 3px solid #ddd;
+      color: #444;
+      font-size: 0.9em;
+    }
+
+    .timestamp {
+      font-size: 0.7em;
+      color: #888;
+      float: right;
+    }
+
+	.reveal .controls {
+		color: #7302d5; 
+	}
+
+	.reveal .progress span {
+		background-color: #7302d5;
+	}
+  </style>
+</head>
+
+<body>
+
+<div class="reveal">
+  <div class="slides">
+	<section data-background-image="media/gear.svg"
+	         data-background-size="700px"
+			 data-background-position="center"
+			 data-background-opacity="0.1">
+		<h3>Delavnica avtomatizacije</h3>
+	</section>
+
+	<section>
+      <div class="email">
+        <div class="email-header">
+          From: Menedžment <br>
+          To: You <br>
+          <span class="timestamp">05:00</span>
+        </div>
+        <div class="email-subject">Poročilo o delu</div>
+        <div class="email-body">
+          Si kaj naredila danes?
+        </div>
+        <div class="email-footer">— Franc Pekel</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="email">
+        <div class="email-header">
+          From: Menedžment <br>
+          To: You <br>
+          <span class="timestamp">13:21</span>
+        </div>
+        <div class="email-subject">Vprašanje o kupcih</div>
+        <div class="email-body">
+          Kaj misliš z "Jutri gredo v Spodnji Duplek izletniki: Tu so imeni, ki ste jih navedli."?
+
+          <div class="thread">
+            <strong>Previous message:</strong><br>
+            Kateri naši izletniki grejo jutri v Spodnji Duplek?
+          </div>
+        </div>
+        <div class="email-footer">— Franc Pekel 2</div>
+      </div>
+    </section>
+
+	<section>
+      <div class="email">
+        <div class="email-header">
+          From: Menedžment <br>
+          To: You <br>
+          <span class="timestamp">05:00</span>
+        </div>
+        <div class="email-subject">O novih izzivih</div>
+        <div class="email-body">
+          Pozdravljena, <br>
+		  Zdaj, ko ni več Nadje, boš ti prevzela planiranje tur.
+        </div>
+        <div class="email-footer">— Franc Pekel</div>
+      </div>
+    </section>
+
+	<section>
+      <div class="email">
+        <div class="email-header">
+          From: Druga agencija <br>
+          To: You <br>
+          <span class="timestamp">11:00</span>
+        </div>
+        <div class="email-subject">Sprejetje</div>
+        <div class="email-body">
+          Pozdravljena, <br>
+		  izpolnjujete vse naše zahteve, zato vam z veseljem sporočamo, da ste sprejeti.
+        </div>
+        <div class="email-footer">— Franc Nebo</div>
+      </div>
+    </section>
+
+	<section>
+      <div class="email">
+        <div class="email-header">
+          From: Menedžment <br>
+          To: You <br>
+          <span class="timestamp">22:12</span>
+        </div>
+        <div class="email-subject">O možnosti vrnitve</div>
+        <div class="email-body">
+          Pozdravljena, <br>
+		  Potrebovali bi tvoje pomoči, seveda dobiš povišico.
+        </div>
+        <div class="email-footer">— Franc Pekel Obupani</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    backgroundTransition: 'fade',
+    controls: true,
+    progress: true
+  });
+</script>
+
+</body>
 </html>
